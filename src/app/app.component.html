@@ -1,0 +1,26 @@
+
+<div class="content" role="main">
+  <div class="container">
+    <h1 align="center">Calculator With Angular</h1><br><br>
+    <section  class="bg-dark"><span> &nbsp;&nbsp;{{resulat}}</span></section>
+    <table class="table" border="1">
+      <tr>
+        <td (click)="getaction(item)" *ngFor="let item of ['*','/','+','-']" >{{item}}</td>
+      </tr>
+      <tr>
+        <td (click)="getaction(item)" *ngFor="let item of [7,8,9,'%']" >{{item}}</td>
+      </tr>
+      <tr>
+         <td (click)="getaction(item)" *ngFor="let item of [4,5,6,'(']" >{{item}}</td> 
+      </tr>
+      <tr>
+        <td (click)="getaction(item)" *ngFor="let item of [1,2,3,')']" >{{item}}</td>
+      </tr>
+      <tr>
+        <td (click)="getaction(item)" *ngFor="let item of [0,'.']" >{{item}}</td>
+        <td class="bg-danger" (click)="reset()">AC</td>
+        <td class="bg-info" (click)="equal()" >=</td>
+      </tr>
+    </table>
+  </div>
+  </div>
